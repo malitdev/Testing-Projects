@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Bank XYZ Automation Test">
+
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener
+			class-name="org.malitcode.listeners.CustomListeners" />
+	</listeners>
+
+
+	<parameter name="browser" value="Firefox"></parameter>
+
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="org.malitcode.test.ManagerLoginTest" />
+
+	       <!--  
+			<class name="org.malitcode.test.CustomerLoginTest" />
+			<class name="org.malitcode.test.CustomerWithdrawalTest" />
+			<class name="org.malitcode.test.BaseClass" />
+			<class name="org.malitcode.BankXYZ.AppTest" />
+			-->
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
